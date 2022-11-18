@@ -2,7 +2,7 @@ export default{
     name: "sneakers",
     title: "Sneakers",
     type: "document",
-    feilds: [
+    fields: [
         {
             name: "image",
             title: "Image",
