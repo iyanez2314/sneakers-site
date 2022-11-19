@@ -5,12 +5,8 @@ body, * {
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   box-sizing: border-box;
-
 }
 
-::-webkit-scrollbar {
-  width: 0px;
-}
 
 a {
   color: inherit;
@@ -23,41 +19,28 @@ h1{
   font-size: 80px;
   color: #333333;
 }
-.section{
-  background: #E5E5E5;
-  overflow: hidden;
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-  -webkit-transition: opacity 350ms linear;
-  -moz-transition: opacity 350ms linear;
-  -ms-transition: opacity 350ms linear;
-  -o-transition: opacity 350ms linear;
-  transition: opacity 350ms linear;
-}
-
-.section > * {
-    position: relative;
-    z-index: 2;
-}
-
-.section:after{
-  content: "";
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  width: 0;
-  height: 0;
-  border-style: solid;
-  border-color: transparent transparent #f6f2f2 transparent;
-  border-width: 0 0 400px 400px;
-}
 
 /*
 Nav bar component style
 */
+
+.grid-container{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 100vh;
+}
+
+.sneakers-product-card-container{
+  background-color: #226CE0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sneakers-product-image{
+  width: 200px;
+  height: 200px;
+}
 
 .navbar-container{
   display: flex;
@@ -98,13 +81,6 @@ Nav bar component style
   font-weight: 600;
 
 }
-/*
-end of navbar styles
-*/
-
-/*
-Start of the footer container
-*/
 .footer-container{
   color: #FCA311;
   text-align: center;
@@ -123,28 +99,4 @@ Start of the footer container
   font-size: 30px;
   display: flex;
   gap: 10px;
-}
-
-/*
-End of the footer container
-*/
-
-
-@media(min-width: 768px){
-  .section:after{
-    border-width: 0 0 1200px 500px;
-  }
-}
-
-@media(min-width: 992px){
-  .section:after{
-    border-width: 0 0 1200px 700px;
-  }
-}
-
-
-.content{
-  background: transparent;
-  text-align: center;
-  padding: 0 4%;
 }
