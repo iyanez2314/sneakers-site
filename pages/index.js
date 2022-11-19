@@ -1,4 +1,5 @@
 import NavBar from "../Components/NavBar";
+import Footer from "../Components/footer";
 
 
 export default function Home() {
@@ -11,6 +12,7 @@ export default function Home() {
         
       </div>
    </div> 
+   <Footer />
    </>
   )
 }
