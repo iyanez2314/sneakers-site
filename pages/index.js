@@ -4,13 +4,14 @@ import SneakersProductCards from "../Components/SneakersProductCards";
 import { client } from "../lib/client";
 import HeroSection from "../Components/HeroSection";
 
-export default function Home({products, sneakersData}) {
+export default function Home({products, newlyAddedData}) {
+  console.log(newlyAddedData);
   return (
     <>
     <NavBar />
     
    <div className="grid-container">
-      <HeroSection sneakersData={sneakersData}/>
+      <HeroSection newlyAddedData={newlyAddedData}/>
    </div> 
    </>
   )
@@ -21,10 +22,10 @@ export const getServerSideProps = async () => {
   const query = '*[_type =="sneakers"]';
   const products = await client.fetch(query);
 
-  const sneakersQuery = '*[_type == "sneakers"]';
-  const sneakersData = await client.fetch(sneakersQuery);
+  const newlyAddedQuery = '*[_type == "newlyAdded"]';
+  const newlyAddedData = await client.fetch(newlyAddedQuery);
 
   return {
-    props: {products, sneakersData}
+    props: {products, newlyAddedData}
   }
 }
