@@ -24,22 +24,32 @@ h1{
 Nav bar component style
 */
 
-.grid-container{
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  height: 100vh;
+.hero-section-container{
+  background-color: yellow;
 }
 
-.sneakers-product-card-container{
-  background-color: #226CE0;
+.latest-drop-container{
+  background-color: aqua;
+}
+
+.item-name{
+  background-color: blanchedalmond;
+}
+
+.btn-container{
+  background-color: blue;
+}
+
+.hero-banner-image{
+  width: 500px;
+  height: 500px;
+}
+
+.desc{
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-.sneakers-product-image{
-  width: 200px;
-  height: 200px;
+  background-color: red;
 }
 
 .navbar-container{
@@ -99,4 +109,12 @@ Nav bar component style
   font-size: 30px;
   display: flex;
   gap: 10px;
+}
+
+@media screen and (min-width : 390px) {
+  .hero-section-container{
+    grid-template-rows:    70px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows:        140px;
+  }
 }

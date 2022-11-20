@@ -1,21 +1,30 @@
 import NavBar from "../Components/NavBar";
 import Footer from "../Components/footer";
 import SneakersProductCards from "../Components/SneakersProductCards";
-import  HeroSection  from "../Components/HeroSection";
+import { client } from "../lib/client";
+import HeroSection from "../Components/HeroSection";
 
-
-
-
-export default function Home() {
+export default function Home({products, sneakersData}) {
   return (
     <>
     <NavBar />
     
    <div className="grid-container">
-      <SneakersProductCards/>
-      <div className="div2">1</div>
+      <HeroSection sneakersData={sneakersData}/>
    </div> 
-   <Footer />
    </>
   )
+}
+
+
+export const getServerSideProps = async () => {
+  const query = '*[_type =="sneakers"]';
+  const products = await client.fetch(query);
+
+  const sneakersQuery = '*[_type == "sneakers"]';
+  const sneakersData = await client.fetch(sneakersQuery);
+
+  return {
+    props: {products, sneakersData}
+  }
 }
