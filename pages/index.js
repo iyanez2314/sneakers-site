@@ -13,6 +13,10 @@ export default function Home({products, newlyAddedData}) {
    <div className="grid-container">
       <HeroSection newlyAddedData={newlyAddedData}/>
    </div> 
+
+    <div className="product-container">
+      
+    </div>
    </>
   )
 }
