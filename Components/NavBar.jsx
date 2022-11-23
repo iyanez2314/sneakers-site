@@ -8,7 +8,7 @@ const NavBar = () => {
     <div className='navbar-container'>
       <p className='logo'>
         <Link href='/'>
-          Shoe Store
+          <p className='shoe-store-logo-text'>Shoe Store</p>
         </Link>
       </p>
       <button type='button' className='cart-icon' onClick={() => console.log("Cart CLicked")}>

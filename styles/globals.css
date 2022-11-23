@@ -38,6 +38,11 @@ h1{
   font-size: 18px;                         
 }
 
+.shoe-store-logo-text{
+  font-family: 'Press Start 2P', cursive;
+  font-size: 12px;
+}
+
 .cart-icon{
   font-size: 25px;
   color: gray;
@@ -133,17 +138,24 @@ h1{
   font-size: 24px;
   font-family: 'Press Start 2P', cursive;
 }
+
+.product-info-container{
+  display: flex;
+  justify-content: space-around;
+  padding: 12px;
+  align-items: center;
+}
+
 .product-container{
   display: flex;
   justify-content: space-around;
-  background-color: aliceblue;
 }
 
 .product-card{
-  background-color: red;
+  background-color: #dcdcdc;
   border-radius: 10px;
   max-width: 334px;
-  height: 400px;
+  height: 365px;
   margin: 24px;
 }
 .product-card p {
@@ -260,7 +272,6 @@ h1{
     }
 
     .product-card{
-      background-color: red;
       border-radius: 10px;
       margin-bottom: 14px;
     }
