@@ -10,13 +10,6 @@ body, * {
   width: 0px;
 }
 
-
-.grid-container{
-  max-width: 1400px; 
-  margin: auto;
-  width: 100%;
-}
-
 a {
   color: inherit;
   text-decoration: none;
@@ -30,42 +23,43 @@ h1{
 }
 
 
+.grid-container{
+  max-width: 1400px; 
+  margin: auto;
+  width: 100%;
+  background-color: #dcdcdc;
+  padding: 20px;
+  border-radius: 30px;
+}
+
+.buy-now-btn{
+  border-radius: 15px;
+  padding: 10px 16px;
+  background-color: #f02d34;
+  color: white;
+  border: none;
+  margin-top: 16px;
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+  z-index:10000 !important;
+}
+
 .hero-section-container{
-  background-color: yellow;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
 }
 
-.sneakers-image-container{
-}
-
-.latest-drop-container{
-  background-color: aqua;
-}
-
-.item-name{
-  background-color: blanchedalmond;
-}
-
-.btn-container{
-  background-color: blue;
+.item-name, .desc, .btn-container, .item-name{
+  padding: 5px;
 }
 
 .hero-banner-image{
   width: 500px;
   height: 500px;
+  object-fit: contain;
 }
-
-.desc{
-  background-color: red;
-}
-
-.left-section{
-  padding: 10px;
-  background-color: #FCA311;
-}
-
 
 .navbar-container{
   display: flex;
@@ -77,7 +71,6 @@ h1{
 .logo{
   color: gray;
   font-size: 18px;
-
 }
 
 .cart-icon{
@@ -98,7 +91,7 @@ h1{
   right: -8px;
   font-size: 12px;
   color: #eee;
-  background-color: #FCA311;
+  background-color: #f02d34;
   width: 18px;
   height: 18px;
   border-radius: 50%;
@@ -106,7 +99,7 @@ h1{
   font-weight: 600;
 
 }
-.footer-container{
+/* .footer-container{
   color: #FCA311;
   text-align: center;
   margin-top: 20px;
@@ -118,19 +111,40 @@ h1{
   gap: 10px;
   justify-content: center;
 
-}
-
+} */
+/* 
 .footer-container .icons{
   font-size: 30px;
   display: flex;
   gap: 10px;
-}
+} */
 
 @media  screen and (max-width: 1000px) {
   .hero-section-container{
-    display: flex;
     flex-direction: column;
-    max-width: 1000px;
-    background-color: rebeccapurple;
   }
+  .latest-drop-text{
+    font-size: 60px;
+  }
+  .hero-banner-image{
+    width: 325px;
+    height: 325px;
+    object-fit: contain;
+    }
+    .btn-container{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 1px;
+    }
+    .desc {
+      align-items: center;
+      justify-content: center;
+      display: flex;
+    }
+    .item-name{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
 }

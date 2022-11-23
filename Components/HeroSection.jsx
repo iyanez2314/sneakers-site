@@ -9,7 +9,7 @@ const HeroSection = ({newlyAddedData}) => {
     <div className='hero-section-container'>
         <div className='left-section'>
             <div className='latest-drop-container'>
-                <h1>Latest Drop</h1>
+                <h1 className='latest-drop-text'>Latest Drop</h1>
             </div>
             <div className='item-name'>
                 <p>{newlyAddedData[0].product}</p>
@@ -21,7 +21,7 @@ const HeroSection = ({newlyAddedData}) => {
             </div>
             <div className='btn-container'>
                 <Link href="/">
-                    <button type='button'>{newlyAddedData[0].buttonText}</button>
+                    <button type='button' className='buy-now-btn'>{newlyAddedData[0].buttonText}</button>
                 </Link>
             </div>
         </div>
