@@ -1,9 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200;0,400;1,200;1,300&family=Press+Start+2P&family=Quicksand:wght@300;400;500;600&family=Roboto:wght@500;700&display=swap');
+
 html,
 body, * {
   padding: 0;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif, 'Pokemon Solid';
   box-sizing: border-box;
 }
 ::-webkit-scrollbar {
@@ -45,10 +47,23 @@ h1{
   z-index:10000 !important;
 }
 
+.latest-drop-text{
+  font-size: 50px;
+  font-family: 'Press Start 2P', cursive;
+}
+
 .hero-section-container{
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+}
+
+.hero-section-container button {
+  font-family: 'Press Start 2P', cursive; 
+}
+
+.hero-section-container p, .hero-section-container h5 {
+  font-family: 'Press Start 2P', cursive; 
 }
 
 .item-name, .desc, .btn-container, .item-name{
@@ -70,7 +85,7 @@ h1{
 
 .logo{
   color: gray;
-  font-size: 18px;
+  font-size: 18px;                         
 }
 
 .cart-icon{
@@ -124,8 +139,18 @@ h1{
     flex-direction: column;
   }
   .latest-drop-text{
-    font-size: 60px;
+    font-size: 30px;
   }
+  .hero-section-container p {
+    font-size: 10px;
+  }
+  .hero-section-container h5{
+    font-size: 10px;
+  }
+  .hero-section-container button {
+    font-size: 10px;
+  }
+
   .hero-banner-image{
     width: 325px;
     height: 325px;
