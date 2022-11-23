@@ -1,12 +1,23 @@
 import React from 'react';
 import { urlFor } from '../lib/client';
+import Link from 'next/link';
 
-const SneakersProductCards = ({sneakersData}) => {
-console.log('hi', sneakersData[0].image[0].asset._ref);
+const SneakersProductCards = ({products}) => {
   return (
-    <div className='sneakers-product-card-container'>
-    <img  src={urlFor(sneakersData[0].image[0].asset._ref)} className='sneakers-product-image' alt="image of shoes"/>
-    </div>
+    <Link href="/">
+      <div className='product-card'>
+          <img src={urlFor(products.image[0].asset._ref)}
+          width={350}
+          height={350}
+          className="product-image"/>
+          <p>
+            {products.name}
+          </p>
+          <p>
+            ${products.price}
+          </p>
+      </div>
+    </Link>
   )
 }
 

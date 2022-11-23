@@ -3,8 +3,6 @@ import Link from 'next/link';
 import { urlFor } from '../lib/client';
 
 const HeroSection = ({newlyAddedData}) => {
-
-    console.log(newlyAddedData);
   return (
     <div className='hero-section-container'>
         <div className='left-section'>
