@@ -14,6 +14,10 @@ export default function Home({products, newlyAddedData}) {
       <HeroSection newlyAddedData={newlyAddedData}/>
    </div> 
 
+    <div className="product-title-container">
+      <h4 className="product-container-title">Gotta Cop'em All!</h4>
+    </div>
+    
     <div className="product-container">
       {products?.map((product) => <SneakersProductCards key={product._id} products={product}/>)}
     </div>
