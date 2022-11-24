@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200;0,400;1,200;1,300&family=Press+Start+2P&family=Quicksand:wght@300;400;500;600&family=Roboto:wght@500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Encode+Sans:wght@100;200;300;400&display=swap');
 
 html,
 body, * {
@@ -39,13 +40,15 @@ h1{
 }
 
 .shoe-store-logo-text{
-  font-family: 'Press Start 2P', cursive;
-  font-size: 12px;
+  font-family: 'Encode Sans', sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  color: #586F7C;
 }
 
 .cart-icon{
   font-size: 25px;
-  color: gray;
+  color: #586F7C;
   cursor: pointer;
   position: relative;
   transition: transform .4s ease;
@@ -77,7 +80,7 @@ h1{
   max-width: 1400px; 
   margin: auto;
   width: 100%;
-  background-color: #dcdcdc;
+  background-color: #F4F4F9;
   padding: 20px;
   border-radius: 30px;
 }
@@ -96,8 +99,10 @@ h1{
 }
 
 .latest-drop-text{
-  font-size: 50px;
-  font-family: 'Press Start 2P', cursive;
+  font-size: 70px;
+  font-family: 'Encode Sans', sans-serif;
+  font-weight: 400;
+  color: #2F4550;
 }
 
 .hero-section-container{
@@ -107,15 +112,24 @@ h1{
 }
 
 .hero-section-container button {
-  font-family: 'Press Start 2P', cursive; 
+  font-family: 'Encode Sans', sans-serif;
+  font-size: 16px;
 }
 
 .hero-section-container p, .hero-section-container h5 {
-  font-family: 'Press Start 2P', cursive; 
+  font-family: 'Encode Sans', sans-serif;
 }
 
 .item-name, .desc, .btn-container, .item-name{
   padding: 5px;
+}
+
+.item-name p {
+  color: #2F4550;
+}
+
+.desc h5 {
+  color: #2F4550;
 }
 
 .hero-banner-image{
@@ -135,8 +149,9 @@ h1{
 }
 
 .product-container-title{
-  font-size: 24px;
-  font-family: 'Press Start 2P', cursive;
+  font-size: 35px;
+  font-family: 'Encode Sans', sans-serif;
+  color: #2F4550;
 }
 
 .product-info-container{
@@ -149,18 +164,20 @@ h1{
 .product-container{
   display: flex;
   justify-content: space-around;
+  flex-wrap: wrap;
 }
 
 .product-card{
-  background-color: #dcdcdc;
+  background-color: #F4F4F9;
   border-radius: 10px;
   max-width: 334px;
   height: 365px;
   margin: 24px;
 }
 .product-card p {
-  font-size: 12px;
-  
+  font-size: 14px;
+  font-family: 'Encode Sans', sans-serif;
+  color: #2F4550;
 }
 
 /* product section ending */
@@ -169,17 +186,30 @@ h1{
 .product-detail-image{
   width: 375px;
   height: 375px;
+  object-fit: contain;
 }
 .product-detail-container{
-  background-color: #f02d34;
+  max-width: 1400px; 
+  margin: auto;
+  width: 100%;
+  background-color: #F4F4F9;
+  padding: 20px;
+  border-radius: 30px;
+  background-color: yellow;
 }
 .detail-specs{
-  background-color: aliceblue;
+  background-color: red;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.image-container{
+  background-color: aqua;
 }
 
 .detail-specs h2, .detail-specs p{
-  font-family: 'Press Start 2P', cursive;
-  font-size: 10px;
+  font-size: 14px;
+  font-family: 'Encode Sans', sans-serif;
 }
 
 
@@ -246,16 +276,16 @@ h1{
     flex-direction: column;
   }
   .latest-drop-text{
-    font-size: 30px;
+    font-size: 60px;
   }
   .hero-section-container p {
-    font-size: 10px;
+    font-size: 16px;
   }
   .hero-section-container h5{
-    font-size: 10px;
+    font-size: 14px;
   }
   .hero-section-container button {
-    font-size: 10px;
+    font-size: 12px;
   }
 
   .hero-banner-image{
@@ -288,8 +318,7 @@ h1{
     }
 
     .product-container-title{
-      font-size: 16px;
-      font-family: 'Press Start 2P', cursive;
+      font-size: 30px;
     }
 
     .product-card{

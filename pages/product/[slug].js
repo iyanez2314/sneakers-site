@@ -7,16 +7,14 @@ const ProductDetail = ({product}) => {
   return (
     <div>
         <div className='product-detail-container'>
-            <div>
                 <div className='image-container'>
                   <img src={urlFor(imageOfProduct)} className='product-detail-image'/>
                 </div>
-            </div>
-            <div className='detail-specs'>
-              <h2 id='details'>{name}</h2>
-              <p id='details'>{price}</p>
-              <p id='details'>{details}</p>
-            </div>
+                <div className='detail-specs'>
+                  <h2 id='details'>{name}</h2>
+                  <p id='details'>${price}</p>
+                  <p id='details'>{details}</p>
+                </div>
         </div>
     </div>
   )

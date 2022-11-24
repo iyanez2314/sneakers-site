@@ -12,7 +12,7 @@ export default function Home({products, newlyAddedData}) {
    </div> 
 
     <div className="product-title-container">
-      <h4 className="product-container-title">Gotta Cop'em All!</h4>
+      <h4 className="product-container-title">Featured Products</h4>
     </div>
     
     <div className="product-container">
