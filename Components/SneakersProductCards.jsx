@@ -4,7 +4,7 @@ import Link from 'next/link';
 
 const SneakersProductCards = ({products}) => {
   return (
-    <Link href="/">
+    <Link href={`/product/${products.slug.current}`}>
       <div className='product-card'>
       <div className='product-info-container'>
           <p>

@@ -160,7 +160,26 @@ h1{
 }
 .product-card p {
   font-size: 12px;
+  
+}
+
+/* product section ending */
+
+/*Slug section */
+.product-detail-image{
+  width: 375px;
+  height: 375px;
+}
+.product-detail-container{
+  background-color: #f02d34;
+}
+.detail-specs{
+  background-color: aliceblue;
+}
+
+.detail-specs h2, .detail-specs p{
   font-family: 'Press Start 2P', cursive;
+  font-size: 10px;
 }
 
 
@@ -188,7 +207,9 @@ h1{
 
 
 
-/* product section ending */
+
+
+/*Slug end section */
 
 
 /* footer section start */

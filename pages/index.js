@@ -5,11 +5,8 @@ import { client } from "../lib/client";
 import HeroSection from "../Components/HeroSection";
 
 export default function Home({products, newlyAddedData}) {
-  console.log(newlyAddedData);
   return (
     <>
-    <NavBar />
-    
    <div className="grid-container">
       <HeroSection newlyAddedData={newlyAddedData}/>
    </div> 
