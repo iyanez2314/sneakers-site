@@ -263,25 +263,12 @@ h1{
 
 /* footer section start */
 
-/* .footer-container{
-  color: #FCA311;
-  text-align: center;
-  margin-top: 20px;
-  padding: 30px 10px;
-  font-weight: 700;
+.footer-container{
+  background-color: rebeccapurple;
   display: flex;
-  flex-direction: column;
+  justify-content: end;
   align-items: center;
-  gap: 10px;
-  justify-content: center;
-
-} */
-/* 
-.footer-container .icons{
-  font-size: 30px;
-  display: flex;
-  gap: 10px;
-} */
+}
 
 /* footer section end */
 

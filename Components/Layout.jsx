@@ -1,6 +1,7 @@
 import React from 'react'
 import NavBar from './NavBar'
 import Head from 'next/head'
+// import Footer from './footer'
 
 const Layout = ({children}) => {
   return (
@@ -14,6 +15,7 @@ const Layout = ({children}) => {
       <main className='main-container'>
           {children}
       </main>
+      {/* <Footer/> */}
     </div>
   )
 }
