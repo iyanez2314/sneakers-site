@@ -28,9 +28,9 @@ const ProductDetail = ({product, products}) => {
     <div className='featured-title-container'>
           <h3>Products You May Also Like</h3>
     </div>
-    <div className='featured-products'>
+    <div className='featured-products-container'>
         
-        <div className='products-featured'>
+        <div className='featured-products'>
           {
             products?.map((items) => <SneakersProductCards  key={items._id} products={items} />)
           }
