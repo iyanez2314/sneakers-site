@@ -10,9 +10,7 @@ const Footer = () => {
       width="325"
       height="325"
       style={{border:0}}
-      allowfullscreen=""
-      loading="lazy"
-      referrerpolicy="no-referrer-when-downgrade"/>
+      loading="lazy"/>
       <div className='store-hours-container'>
           <h4>Store Hours</h4>
           <p>Mon: 9-5</p>
@@ -24,16 +22,6 @@ const Footer = () => {
           <p>Sun: 9-5</p>
       </div>
     </div>
-    {/* <div className='store-hours-container'>
-      <h4>Store Hours</h4>
-      <p>Mon: 9-5</p>
-      <p>Tue: 9-5</p>
-      <p>Wed: 9-5</p>
-      <p>Thur: 9-5</p>
-      <p>Fri: 9-5</p>
-      <p>Sat: 9-5</p>
-      <p>Sun: 9-5</p>
-    </div> */}
   </div>
   )
 }

@@ -6,11 +6,11 @@ import { AiOutlineShopping } from 'react-icons/ai'
 const NavBar = () => {
   return (
     <div className='navbar-container'>
-      <p className='logo'>
+      <div className='logo'>
         <Link href='/'>
           <p className='shoe-store-logo-text'>Shoe Store</p>
         </Link>
-      </p>
+      </div>
       <button type='button' className='cart-icon' onClick={() => console.log("Cart CLicked")}>
         <AiOutlineShopping/>
         <span className='cart-item-qty'>1</span>
@@ -19,4 +19,4 @@ const NavBar = () => {
   )
 }
 
-export default NavBar
+export default NavBar;
