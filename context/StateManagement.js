@@ -8,8 +8,6 @@ export const StateContext = ({children}) =>{
     const [totalQuantities, setTotalQuantities] = useState(0); // this will give us the quantity of the cart items
     const [qty, setQty] = useState(1); // this will be the quantity of all the items that are in the cart
 
-    console.log(cartItems);
-
     /**
      * @params this function will receive a product and a quatity
      * @description This function will add the product we clicked to the cart but we will also check to see if that product is already in the cart

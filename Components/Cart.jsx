@@ -1,28 +1,35 @@
 import React from 'react';
 import { useStateContext } from '../context/StateManagement';
+import {FcPrevious} from 'react-icons/fc'
 import { urlFor } from '../lib/client';
 
 const Cart = () => {
   const {totalPrice, totalQuantities, setShowCart, cartItems} = useStateContext();
-  // everything in this component will be rendered dynamicly 
   return (
     <div className='cart-wrapper'>
     <div className='cart-container'>
-      <h3 className='heading'>Your cart</h3>
-      <span className='cart-num-items'>{totalQuantities}</span>
-      {cartItems < 1 && (
-          <div>Your cart is empty</div>
-        )}
+      <FcPrevious onClick={() => setShowCart(false)} size={25}/>
+      <h2>Your cart ({totalQuantities})</h2>
+      {cartItems.length < 1 && (
+        <div className='empty-cart'>
+        <h3>Your shopping bag is empty</h3>
+        </div>
+      )}
       <div className='cart-product-container'>
-        {
-          cartItems >= 1 && (
-            cartItems.map((items, i) => {
-              <div className='cart-product' key={items._id}>
-                <img src={urlFor(items?.image[0])} className='product-cart-image'/>
-              </div>
-            })
-          )
-        }
+        {cartItems.length >= 1 && cartItems.map((item, index) => (
+          <div className='cart-product' key={item._id}>
+            <img src={urlFor(item?.image[0])} className="cart-product-image"/>
+            <div className='item-desc'>
+                <h4>{item.name}</h4>
+                <p>${item.price}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+      <div className='total-price-container'>
+        <h3>
+          Total Price ${totalPrice}
+        </h3>
       </div>
     </div>
     </div>
