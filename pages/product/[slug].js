@@ -1,8 +1,10 @@
 import React from 'react'
 import SneakersProductCards from '../../Components/SneakersProductCards';
-import { client, urlFor } from '../../lib/client'
+import { client, urlFor } from '../../lib/client';
+import { useStateContext } from '../../context/StateManagement';
 
 const ProductDetail = ({product, products}) => {
+  const {onAddToCart, qty} = useStateContext();
   const {name, details, price } = product;
   const imageOfProduct = product.image[0].asset._ref;
   return (
@@ -19,7 +21,7 @@ const ProductDetail = ({product, products}) => {
                     <p id='details'>{details}</p>
                   </div>
                   <div className='button-container'>
-                    <button type="button" className='buy-now'>Buy Now!</button>
+                    <button type="button" className='buy-now' onClick={() => onAddToCart(product, qty)}>Add To Cart</button>
                   </div>
                 </div>
         </div>
