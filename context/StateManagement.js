@@ -21,6 +21,7 @@ export const StateContext = ({children}) =>{
         setTotalPrice((prevPrice) => prevPrice + product.price * quantity);
         setTotalQuantities((prevQty) => prevQty + quantity);
 
+        // this will allow us to conditionally check the if the item we have in cart is already in there if it is we will just update the quantity. If not we will add it to the cart
         if(checkIfItemIsInCart){
             const updatedCartItems = cartItems.map((cartItem) => {
                 if(cartItem._id === product._id) return {
