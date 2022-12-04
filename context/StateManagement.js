@@ -7,6 +7,7 @@ export const StateContext = ({children}) =>{
     const [totalPrice, setTotalPrice] = useState(0); // This will hold the state for the total amount of the items in the cart
     const [totalQuantities, setTotalQuantities] = useState(0); // this will give us the quantity of the cart items
     const [qty, setQty] = useState(1); // this will be the quantity of all the items that are in the cart
+    let foundProduct;
 
     /**
      * @params this function will receive a product and a quatity
@@ -35,8 +36,17 @@ export const StateContext = ({children}) =>{
     };
 
 
-    // I need another function that will handle the removing of items in the cart and updating the subtotal
+    
+    const onRemove = (product) => {
+        foundProduct = cartItems.find((item) => item._id === product._id);
+        let updatedCartItems = cartItems.filter((item) => item._id !== product._id);
 
+        setTotalPrice((prevPrice) => prevPrice - foundProduct.price * foundProduct.quantity);
+        setTotalQuantities((prevQty) => prevQty - foundProduct.quantity);
+        setCartItems(updatedCartItems);
+    };
+
+    
 
     // I will also need another function that will handle all the logic in the cart component as for as adding more quantity, decreasing the quantity, and removing the product entirely
 
@@ -54,6 +64,7 @@ export const StateContext = ({children}) =>{
             setTotalQuantities,
             setCartItems,
             onAddToCart,
+            onRemove
         }}
         >
             {children}

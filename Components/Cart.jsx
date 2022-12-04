@@ -4,7 +4,7 @@ import {FcPrevious} from 'react-icons/fc'
 import { urlFor } from '../lib/client';
 
 const Cart = () => {
-  const {totalPrice, totalQuantities, setShowCart, cartItems} = useStateContext();
+  const {totalPrice, totalQuantities, setShowCart, cartItems, onRemove} = useStateContext();
   return (
     <div className='cart-wrapper'>
     <div className='cart-container'>
@@ -23,6 +23,9 @@ const Cart = () => {
                 <h4>{item.name}</h4>
                 <p>${item.price}</p>
             </div>
+            <button onClick={() => onRemove(item)}>
+              click me
+            </button>
           </div>
         ))}
       </div>
