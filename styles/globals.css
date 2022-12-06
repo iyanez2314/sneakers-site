@@ -88,13 +88,13 @@ h1{
 
 .buy-now-btn, .button-container button{
   border-radius: 15px;
-  padding: 10px 16px;
+  padding: 5px 10px;
   background-color: #f02d34;
   color: white;
   border: none;
   margin-top: 16px;
-  font-size: 18px;
-  font-weight: 500;
+  font-size: 12px;
+  font-weight: 200;
   cursor: pointer;
   z-index:10000 !important;
 }
@@ -164,8 +164,9 @@ h1{
 
 .product-container{
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   flex-wrap: wrap;
+  padding: 63px;
 }
 
 .product-card{
@@ -241,10 +242,8 @@ h1{
 .featured-products-container{
   display: flex;
   border-radius: 6px;
-  /* color: #333; */
   background: #F4F4F9;
   padding: 1rem;
-  /* box-shadow: 0 0 1rem #000 inset; */
   overflow-x: auto;
   position: relative;
 }
@@ -281,6 +280,13 @@ h1{
 .featured-title-container h3 {
   font-size: 26px;
   font-family: 'Encode Sans', sans-serif;
+}
+
+.button-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
 }
 
 /*Slug end section */
@@ -407,12 +413,12 @@ h1{
       align-items: center;
     }
 
-    .product-container{
+    /* .product-container{
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
-    }
+    } */
 
     .product-container-title{
       font-size: 30px;

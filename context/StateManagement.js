@@ -46,7 +46,7 @@ export const StateContext = ({children}) =>{
         setCartItems(updatedCartItems);
     };
 
-    
+
 
     // I will also need another function that will handle all the logic in the cart component as for as adding more quantity, decreasing the quantity, and removing the product entirely
 

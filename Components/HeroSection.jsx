@@ -1,8 +1,10 @@
 import React from 'react';
 import Link from 'next/link';
 import { urlFor } from '../lib/client';
+import { useStateContext } from '../context/StateManagement';
 
 const HeroSection = ({newlyAddedData}) => {
+const {onAddToCart, setShowCart } = useStateContext();
   return (
     <div className='hero-section-container'>
         <div className='left-section'>
