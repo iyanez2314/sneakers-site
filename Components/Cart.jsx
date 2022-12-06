@@ -2,9 +2,11 @@ import React from 'react';
 import { useStateContext } from '../context/StateManagement';
 import {FcPrevious} from 'react-icons/fc'
 import { urlFor } from '../lib/client';
+import { HiMinusSm, HiPlusSm } from "react-icons/hi";
+import { FiTrash } from 'react-icons/fi'
 
 const Cart = () => {
-  const {totalPrice, totalQuantities, setShowCart, cartItems, onRemove} = useStateContext();
+  const {totalPrice, totalQuantities, setShowCart, cartItems, onRemove, cartQuantity} = useStateContext();
   return (
     <div className='cart-wrapper'>
     <div className='cart-container'>
@@ -22,10 +24,18 @@ const Cart = () => {
             <div className='item-desc'>
                 <h4>{item.name}</h4>
                 <p>${item.price}</p>
+                <p>X{item.quantity}</p>
             </div>
-            <button onClick={() => onRemove(item)}>
-              click me
-            </button>
+            <div>
+              <p className='qty-container'>
+                <span type='button' onClick={() => cartQuantity(item._id, 'decrement')}><HiMinusSm/></span>
+                <span>{item.quantity}</span>
+                <span type='button' onClick={() => cartQuantity(item._id, 'increment')}><HiPlusSm /></span>
+              </p>
+            </div>
+            <span onClick={() => onRemove(item)}>
+              <FiTrash />
+            </span>
           </div>
         ))}
       </div>

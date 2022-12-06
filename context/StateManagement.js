@@ -8,6 +8,7 @@ export const StateContext = ({children}) =>{
     const [totalQuantities, setTotalQuantities] = useState(0); // this will give us the quantity of the cart items
     const [qty, setQty] = useState(1); // this will be the quantity of all the items that are in the cart
     let foundProduct;
+    let index;
 
     /**
      * @params this function will receive a product and a quatity
@@ -46,9 +47,24 @@ export const StateContext = ({children}) =>{
         setCartItems(updatedCartItems);
     };
 
+    const cartQuantity = (id, value) => {
+        const newCartItems = cartItems.filter((item) => item._id !== id);
+        foundProduct = cartItems.find((item) => item._id === id);
+        index = cartItems.findIndex((product) => product._id === id);
 
+        if(value === 'increment'){
+            setCartItems([...newCartItems, {...foundProduct, quantity: foundProduct.quantity + 1}]);
+            setTotalPrice((prevPrice) => prevPrice + foundProduct.price);
+            setTotalQuantities((prevTotal) => prevTotal + 1)
+        } else if (value === 'decrement'){
+            if(foundProduct.quantity > 1){
+                setCartItems([...newCartItems, {...foundProduct, quantity: foundProduct.quantity - 1}]);
+                setTotalPrice((prevPrice) => prevPrice - foundProduct.price);
+                setTotalQuantities((prevTotal) => prevTotal - 1);
+            }
+        }
 
-    // I will also need another function that will handle all the logic in the cart component as for as adding more quantity, decreasing the quantity, and removing the product entirely
+    }
 
     return (
         <Context.Provider
@@ -64,7 +80,8 @@ export const StateContext = ({children}) =>{
             setTotalQuantities,
             setCartItems,
             onAddToCart,
-            onRemove
+            onRemove,
+            cartQuantity
         }}
         >
             {children}
