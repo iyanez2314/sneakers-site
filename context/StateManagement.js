@@ -63,7 +63,6 @@ export const StateContext = ({children}) =>{
                 setTotalQuantities((prevTotal) => prevTotal - 1);
             }
         }
-
     }
 
     return (
