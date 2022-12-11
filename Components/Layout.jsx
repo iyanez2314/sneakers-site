@@ -5,7 +5,7 @@ import Footer from './footer'
 
 const Layout = ({children}) => {
   return (
-    <div className='layout'>
+    <div className='layout fade-in'>
       <Head>
         <title>Shoe store</title>
       </Head>

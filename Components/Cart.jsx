@@ -14,7 +14,7 @@ const Cart = () => {
       <h2>Your cart ({totalQuantities})</h2>
       {cartItems.length < 1 && (
         <div className='empty-cart'>
-        <h3>Your shopping bag is empty</h3>
+        <h3>Your shopping bag is empty 😳</h3>
         </div>
       )}
       <div className='cart-product-container'>
@@ -28,9 +28,9 @@ const Cart = () => {
             </div>
             <div>
               <p className='qty-container'>
-                <span type='button' onClick={() => cartQuantity(item._id, 'decrement')}><HiMinusSm/></span>
+                <span type='button' onClick={() => cartQuantity(item._id, 'decrement')}><HiMinusSm color='red'/></span>
                 <span>{item.quantity}</span>
-                <span type='button' onClick={() => cartQuantity(item._id, 'increment')}><HiPlusSm /></span>
+                <span type='button' onClick={() => cartQuantity(item._id, 'increment')}><HiPlusSm color='#06D6A0'/></span>
               </p>
             </div>
             <span onClick={() => onRemove(item)}>
